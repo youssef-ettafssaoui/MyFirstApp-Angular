@@ -19,7 +19,8 @@ export class NavComponent implements OnInit {
     // The prevent default function will prevent the default behavior of the browser by calling this method
     // Users will not unexpectedly be redirected to a different page.
     $event.preventDefault()
-    this.modal.toggleModal()
+
+    this.modal.toggleModal('auth')
   }
 
 }
