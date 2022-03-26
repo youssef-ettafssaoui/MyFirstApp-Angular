@@ -20,6 +20,15 @@ export class ModalService {
     })
   }
 
+  // The purpose of this function is to remove a modal with the associated ID.
+  // The easiest way of removing the model is by using the filter function.
+  // The filter function will return a new array based on the array it was called on.
+  unregister(id: string) {
+    this.modals = this.modals.filter(
+      element => element.id !== id
+    )
+  }
+
   // Inside this method, we will return the visible property.
   isModalOpen(id: String) : Boolean {
     // The element argument refers to each item in the array,
