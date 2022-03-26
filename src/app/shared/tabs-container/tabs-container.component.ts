@@ -37,5 +37,9 @@ export class TabsContainerComponent implements AfterContentInit {
         tab.active = false
       })
       tab.active = true
+
+      // By returning false angular will automatically prevent the default behavior
+      // It's a way to stop the default behavior without adding a parameter for the event object.
+      return false
   }
 }
