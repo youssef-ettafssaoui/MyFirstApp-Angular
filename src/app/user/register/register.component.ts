@@ -33,6 +33,7 @@ export class RegisterComponent {
     Validators.minLength(10),
     Validators.maxLength(10)
   ])
+
   showAlert = false
   alertMsg = 'Please wait! Your account is being created.'
   alertColor = 'blue'
