@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalService } from '../services/modal.service';
+import { ModalService } from '../../services/modal.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,12 @@ import { ModalService } from '../services/modal.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
   // After injecting the service, we can use it in our component.
-  constructor(public modal: ModalService) { }
+  constructor(
+    public modal: ModalService,
+    public auth: AuthService
+    )
+    { }
 
   ngOnInit(): void {
   }
