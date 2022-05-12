@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { VsagComponent } from './vsag/vsag.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -14,10 +15,13 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    // :id => Angular will interpret this as a route parameter.
-    // A route parameter is a placeholder for any value.
     path: 'vsag/:id',
     component: VsagComponent
+  },
+  {
+    path: '**', // Wildcard Routes
+    component: NotFoundComponent
+
   }
 ];
 

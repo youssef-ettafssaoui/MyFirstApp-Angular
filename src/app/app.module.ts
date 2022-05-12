@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { VideoModule } from './video/video.module';
 import { VsagComponent } from './vsag/vsag.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,16 +21,17 @@ import { VsagComponent } from './vsag/vsag.component';
     NavComponent,
     HomeComponent,
     AboutComponent,
-    VsagComponent
+    VsagComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     UserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    VideoModule
+    VideoModule,
+    AppRoutingModule
 
   ],
   providers: [],
